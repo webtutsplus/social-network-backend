@@ -1,0 +1,53 @@
+{
+  "groups": [
+    {
+      "name": "security",
+      "type": "com.simplecoding.social.auth.models.SecurityProperties",
+      "sourceType": "com.simplecoding.social.auth.models.SecurityProperties"
+    }
+  ],
+  "properties": [
+    {
+      "name": "security.allow-credentials",
+      "type": "java.lang.Boolean",
+      "sourceType": "com.simplecoding.social.auth.models.SecurityProperties",
+      "defaultValue": false
+    },
+    {
+      "name": "security.allowed-headers",
+      "type": "java.util.List<java.lang.String>",
+      "sourceType": "com.simplecoding.social.auth.models.SecurityProperties"
+    },
+    {
+      "name": "security.allowed-methods",
+      "type": "java.util.List<java.lang.String>",
+      "sourceType": "com.simplecoding.social.auth.models.SecurityProperties"
+    },
+    {
+      "name": "security.allowed-origins",
+      "type": "java.util.List<java.lang.String>",
+      "sourceType": "com.simplecoding.social.auth.models.SecurityProperties"
+    },
+    {
+      "name": "security.allowed-public-apis",
+      "type": "java.util.List<java.lang.String>",
+      "sourceType": "com.simplecoding.social.auth.models.SecurityProperties"
+    },
+    {
+      "name": "security.cookie-props",
+      "type": "com.simplecoding.social.auth.models.CookieProperties",
+      "sourceType": "com.simplecoding.social.auth.models.SecurityProperties"
+    },
+    {
+      "name": "security.exposed-headers",
+      "type": "java.util.List<java.lang.String>",
+      "sourceType": "com.simplecoding.social.auth.models.SecurityProperties"
+    },
+    {
+      "name": "security.firebase-props",
+      "type": "com.simplecoding.social.auth.models.FirebaseProperties",
+      "sourceType": "com.simplecoding.social.auth.models.SecurityProperties"
+    }
+  ],
+  "hints": []
+}
