@@ -1,0 +1,154 @@
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::        (v2.3.3.RELEASE)
+
+2021-03-19 07:12:53.648  INFO 55581 --- [           main] c.s.s.SpringandfirebaseauthApplication   : Starting SpringandfirebaseauthApplication v0.0.1-SNAPSHOT on social-network with PID 55581 (/root/social-network/springbackend/target/springandfirebaseauth-0.0.1-SNAPSHOT.jar started by root in /root/social-network/springbackend)
+2021-03-19 07:12:53.654  INFO 55581 --- [           main] c.s.s.SpringandfirebaseauthApplication   : No active profile set, falling back to default profiles: default
+2021-03-19 07:12:56.106  INFO 55581 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2021-03-19 07:12:56.293  INFO 55581 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 164ms. Found 1 JPA repository interfaces.
+2021-03-19 07:12:57.499  INFO 55581 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@a87f8ec' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-03-19 07:12:57.522  INFO 55581 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-03-19 07:12:58.423  INFO 55581 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-03-19 07:12:58.450  INFO 55581 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-03-19 07:12:58.454  INFO 55581 --- [           main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.37]
+2021-03-19 07:12:58.626  INFO 55581 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-03-19 07:12:58.626  INFO 55581 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 4813 ms
+2021-03-19 07:12:59.863  INFO 55581 --- [           main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-03-19 07:13:00.009  INFO 55581 --- [         task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-03-19 07:13:00.212  WARN 55581 --- [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-03-19 07:13:00.257  INFO 55581 --- [         task-1] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.20.Final
+2021-03-19 07:13:00.874  INFO 55581 --- [         task-1] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2021-03-19 07:13:01.082  INFO 55581 --- [           main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: aff61c88-c6fe-41ac-8938-d465e17495f0
+
+2021-03-19 07:13:01.369  INFO 55581 --- [         task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-03-19 07:13:01.512  INFO 55581 --- [           main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@67fe380b, org.springframework.security.web.context.SecurityContextPersistenceFilter@2e16b08d, org.springframework.security.web.header.HeaderWriterFilter@2a3a299, org.springframework.web.filter.CorsFilter@4a325eb9, org.springframework.security.web.authentication.logout.LogoutFilter@62d0ac62, com.simplecoding.social.auth.SecurityFilter@28d6290, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@70d8de, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@408613cc, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3dedb4a6, org.springframework.security.web.session.SessionManagementFilter@219f4597, org.springframework.security.web.access.ExceptionTranslationFilter@3f3c7bdb, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@503fbbc6]
+Firebase Initialize
+2021-03-19 07:13:02.436  INFO 55581 --- [         task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-03-19 07:13:02.544  INFO 55581 --- [         task-1] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2021-03-19 07:13:05.096  INFO 55581 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2021-03-19 07:13:05.098  INFO 55581 --- [           main] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
+2021-03-19 07:13:05.657  INFO 55581 --- [         task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-03-19 07:13:05.678  INFO 55581 --- [         task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-03-19 07:13:06.616  INFO 55581 --- [           main] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
+2021-03-19 07:13:06.644  INFO 55581 --- [           main] c.s.s.SpringandfirebaseauthApplication   : Started SpringandfirebaseauthApplication in 14.586 seconds (JVM running for 16.039)
+2021-03-19 07:13:23.413  INFO 55581 --- [nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-03-19 07:13:23.418  INFO 55581 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-03-19 07:13:23.443  INFO 55581 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 24 ms
+2021-03-19 07:13:23.495  INFO 55581 --- [nio-8080-exec-1] c.s.social.auth.SecurityFilter           : null
+2021-03-19 07:13:54.832  INFO 55581 --- [nio-8080-exec-2] c.s.social.auth.SecurityFilter           : eyJhbGciOiJSUzI1NiIsImtpZCI6IjRlMDBlOGZlNWYyYzg4Y2YwYzcwNDRmMzA3ZjdlNzM5Nzg4ZTRmMWUiLCJ0eXAiOiJKV1QifQ.eyJuYW1lIjoibmlsbWFkaGFiIG1vbmRhbCIsInBpY3R1cmUiOiJodHRwczovL2F2YXRhcnMuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3UvNTU2NTgxOT92PTQiLCJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vc29jaWFsLWxvZ2luLWFjNWIyIiwiYXVkIjoic29jaWFsLWxvZ2luLWFjNWIyIiwiYXV0aF90aW1lIjoxNjE2MTI4MzQ4LCJ1c2VyX2lkIjoibnhsZUR0RG81SFZkZWtpSkNTdzBNNW9IZDl1MSIsInN1YiI6Im54bGVEdERvNUhWZGVraUpDU3cwTTVvSGQ5dTEiLCJpYXQiOjE2MTYxMjgzNDgsImV4cCI6MTYxNjEzMTk0OCwiZW1haWwiOiJuaWxtYWRoYWIxOTk0QGdtYWlsLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjpmYWxzZSwiZmlyZWJhc2UiOnsiaWRlbnRpdGllcyI6eyJnaXRodWIuY29tIjpbIjU1NjU4MTkiXSwiZW1haWwiOlsibmlsbWFkaGFiMTk5NEBnbWFpbC5jb20iXX0sInNpZ25faW5fcHJvdmlkZXIiOiJnaXRodWIuY29tIn19.TWpnYCDEsSxv1H6yZI92AjxVFso3lN91mXFWDl_IkhUFpOA6Tke1ftDXMy7A2IVbolTNYHtzrB_FOk_I1OiB5jow-w7kTlkYur6yl8TUrKY_l5BiyGfAu3kfKowjXRaxGVEg8sMT4_be37tAdbvr4pz4YgZDSiirXd0MmP7SM2nrhPwBi2-hIbdCa6Okf4k3xClfUST4A7yOykfqVs7lURpsw-WaSZZMYAxQrRko2ACZcCdRdFFRZzkuIQG6YkYHVxbqVs992jJH9Agmi7FKMeOlnrVqnpgqUs7J9Mr4hQoHG4Un_Pjr1PjZL8M75RS0k98TfufkIoFY7wSJAXXsdQ
+com.google.firebase.auth.FirebaseAuthException: Firebase ID token has expired or is not yet valid. Get a fresh ID token and try again. See https://firebase.google.com/docs/auth/admin/verify-id-tokens for details on how to retrieve an ID token.
+	at com.google.firebase.auth.FirebaseTokenVerifierImpl.checkContents(FirebaseTokenVerifierImpl.java:148)
+	at com.google.firebase.auth.FirebaseTokenVerifierImpl.verifyToken(FirebaseTokenVerifierImpl.java:91)
+	at com.google.firebase.auth.FirebaseAuth$4.execute(FirebaseAuth.java:431)
+	at com.google.firebase.auth.FirebaseAuth$4.execute(FirebaseAuth.java:428)
+	at com.google.firebase.internal.CallableOperation.call(CallableOperation.java:36)
+	at com.google.firebase.auth.FirebaseAuth.verifyIdToken(FirebaseAuth.java:393)
+	at com.google.firebase.auth.FirebaseAuth.verifyIdToken(FirebaseAuth.java:367)
+	at com.simplecoding.social.auth.SecurityFilter.verifyToken(SecurityFilter.java:64)
+	at com.simplecoding.social.auth.SecurityFilter.doFilterInternal(SecurityFilter.java:44)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:92)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:92)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:77)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:105)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:56)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:215)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:178)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:358)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:271)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:373)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1589)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2021-03-19 07:13:54.910 ERROR 55581 --- [nio-8080-exec-2] c.s.social.auth.SecurityFilter           : Firebase Exception:: 
+2021-03-19 07:15:41.844  INFO 55581 --- [io-8080-exec-10] c.s.social.auth.SecurityFilter           : eyJhbGciOiJSUzI1NiIsImtpZCI6IjRlMDBlOGZlNWYyYzg4Y2YwYzcwNDRmMzA3ZjdlNzM5Nzg4ZTRmMWUiLCJ0eXAiOiJKV1QifQ.eyJuYW1lIjoibmlsbWFkaGFiIG1vbmRhbCIsInBpY3R1cmUiOiJodHRwczovL2F2YXRhcnMuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3UvNTU2NTgxOT92PTQiLCJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vc29jaWFsLWxvZ2luLWFjNWIyIiwiYXVkIjoic29jaWFsLWxvZ2luLWFjNWIyIiwiYXV0aF90aW1lIjoxNjE2MTM4MTE0LCJ1c2VyX2lkIjoibnhsZUR0RG81SFZkZWtpSkNTdzBNNW9IZDl1MSIsInN1YiI6Im54bGVEdERvNUhWZGVraUpDU3cwTTVvSGQ5dTEiLCJpYXQiOjE2MTYxMzgxMTQsImV4cCI6MTYxNjE0MTcxNCwiZW1haWwiOiJuaWxtYWRoYWIxOTk0QGdtYWlsLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjpmYWxzZSwiZmlyZWJhc2UiOnsiaWRlbnRpdGllcyI6eyJnaXRodWIuY29tIjpbIjU1NjU4MTkiXSwiZW1haWwiOlsibmlsbWFkaGFiMTk5NEBnbWFpbC5jb20iXX0sInNpZ25faW5fcHJvdmlkZXIiOiJnaXRodWIuY29tIn19.RTG4eaJOGGQya3sSso7sMR7chIocFwudAWVKEr_Zb_n7kUcPjy5ieT15059kB-ITc7yGl4vh0-u5yccpekpuggG0DWRHuSU_SKEQCAuzKkAknpAiAy6h0-1dKP0WxgUm68HeZKvyoH_b3P-oFW3p-ngP2yl1sVeJ4oZ0ecUDuioru_zaT7SkufRE7EDZeJnzL1SEI0HExIaWI9a_Cm3Z3tGpmLDIdDjS10UsusEGkAzSe6UMgI1WjOdGM9-73KV9N44dX2fGqRMDObhxjdfpFqNkzi19lBzQKwWnJw6x-A9iyod5Jmutn1jthLo7ZZCQjPooOjyjD92k6JOSOG8iNA
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::        (v2.3.3.RELEASE)
+
+2021-03-19 07:30:54.975  INFO 56185 --- [           main] c.s.s.SpringandfirebaseauthApplication   : Starting SpringandfirebaseauthApplication v0.0.1-SNAPSHOT on social-network with PID 56185 (/root/social-network/springbackend/target/springandfirebaseauth-0.0.1-SNAPSHOT.jar started by root in /root/social-network/springbackend)
+2021-03-19 07:30:54.986  INFO 56185 --- [           main] c.s.s.SpringandfirebaseauthApplication   : No active profile set, falling back to default profiles: default
+2021-03-19 07:30:57.824  INFO 56185 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2021-03-19 07:30:58.075  INFO 56185 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 203ms. Found 1 JPA repository interfaces.
+2021-03-19 07:30:59.412  INFO 56185 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@68b32e3e' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-03-19 07:30:59.444  INFO 56185 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-03-19 07:31:00.574  INFO 56185 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-03-19 07:31:00.616  INFO 56185 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-03-19 07:31:00.616  INFO 56185 --- [           main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.37]
+2021-03-19 07:31:00.890  INFO 56185 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-03-19 07:31:00.890  INFO 56185 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 5715 ms
+2021-03-19 07:31:02.501  INFO 56185 --- [           main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-03-19 07:31:02.761  INFO 56185 --- [         task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-03-19 07:31:03.070  WARN 56185 --- [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-03-19 07:31:03.151  INFO 56185 --- [         task-1] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.20.Final
+2021-03-19 07:31:04.042  INFO 56185 --- [         task-1] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2021-03-19 07:31:04.376  INFO 56185 --- [           main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 4cea8a63-f46c-4982-9c37-dc1cf2de0249
+
+2021-03-19 07:31:04.813  INFO 56185 --- [         task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-03-19 07:31:05.001  INFO 56185 --- [           main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1e7f2e0f, org.springframework.security.web.context.SecurityContextPersistenceFilter@718607eb, org.springframework.security.web.header.HeaderWriterFilter@344b8190, org.springframework.web.filter.CorsFilter@1da6ee17, org.springframework.security.web.authentication.logout.LogoutFilter@867ba60, com.simplecoding.social.auth.SecurityFilter@63192798, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@757f675c, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@535b8c24, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@78d39a69, org.springframework.security.web.session.SessionManagementFilter@79c5636f, org.springframework.security.web.access.ExceptionTranslationFilter@7f4d9395, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@410e94e]
+Firebase Initialize
+2021-03-19 07:31:06.044  INFO 56185 --- [         task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-03-19 07:31:06.157  INFO 56185 --- [         task-1] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2021-03-19 07:31:09.367  INFO 56185 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2021-03-19 07:31:09.377  INFO 56185 --- [           main] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
+2021-03-19 07:31:10.011  INFO 56185 --- [         task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-03-19 07:31:10.039  INFO 56185 --- [         task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-03-19 07:31:11.256  INFO 56185 --- [nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-03-19 07:31:11.256  INFO 56185 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-03-19 07:31:11.263  INFO 56185 --- [           main] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
+2021-03-19 07:31:11.300  INFO 56185 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 44 ms
+2021-03-19 07:31:11.301  INFO 56185 --- [           main] c.s.s.SpringandfirebaseauthApplication   : Started SpringandfirebaseauthApplication in 17.978 seconds (JVM running for 19.534)
+2021-03-19 07:31:11.354  INFO 56185 --- [nio-8080-exec-1] c.s.social.auth.SecurityFilter           : null
+2021-03-19 07:31:12.614  INFO 56185 --- [nio-8080-exec-2] c.s.social.auth.SecurityFilter           : null
+2021-03-19 07:31:19.713  INFO 56185 --- [nio-8080-exec-3] c.s.social.auth.SecurityFilter           : eyJhbGciOiJSUzI1NiIsImtpZCI6IjRlMDBlOGZlNWYyYzg4Y2YwYzcwNDRmMzA3ZjdlNzM5Nzg4ZTRmMWUiLCJ0eXAiOiJKV1QifQ.eyJuYW1lIjoibmlsbWFkaGFiIG1vbmRhbCIsInBpY3R1cmUiOiJodHRwczovL2F2YXRhcnMuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3UvNTU2NTgxOT92PTQiLCJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vc29jaWFsLWxvZ2luLWFjNWIyIiwiYXVkIjoic29jaWFsLWxvZ2luLWFjNWIyIiwiYXV0aF90aW1lIjoxNjE2MTM4MTE0LCJ1c2VyX2lkIjoibnhsZUR0RG81SFZkZWtpSkNTdzBNNW9IZDl1MSIsInN1YiI6Im54bGVEdERvNUhWZGVraUpDU3cwTTVvSGQ5dTEiLCJpYXQiOjE2MTYxMzgxMTQsImV4cCI6MTYxNjE0MTcxNCwiZW1haWwiOiJuaWxtYWRoYWIxOTk0QGdtYWlsLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjpmYWxzZSwiZmlyZWJhc2UiOnsiaWRlbnRpdGllcyI6eyJnaXRodWIuY29tIjpbIjU1NjU4MTkiXSwiZW1haWwiOlsibmlsbWFkaGFiMTk5NEBnbWFpbC5jb20iXX0sInNpZ25faW5fcHJvdmlkZXIiOiJnaXRodWIuY29tIn19.RTG4eaJOGGQya3sSso7sMR7chIocFwudAWVKEr_Zb_n7kUcPjy5ieT15059kB-ITc7yGl4vh0-u5yccpekpuggG0DWRHuSU_SKEQCAuzKkAknpAiAy6h0-1dKP0WxgUm68HeZKvyoH_b3P-oFW3p-ngP2yl1sVeJ4oZ0ecUDuioru_zaT7SkufRE7EDZeJnzL1SEI0HExIaWI9a_Cm3Z3tGpmLDIdDjS10UsusEGkAzSe6UMgI1WjOdGM9-73KV9N44dX2fGqRMDObhxjdfpFqNkzi19lBzQKwWnJw6x-A9iyod5Jmutn1jthLo7ZZCQjPooOjyjD92k6JOSOG8iNA
+2021-03-19 07:31:25.304  INFO 56185 --- [nio-8080-exec-4] c.s.social.auth.SecurityFilter           : null
