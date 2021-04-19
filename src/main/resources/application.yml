@@ -27,6 +27,7 @@ security:
     - https://${DOMAIN}
     - http://localhost:3000
     - http://localhost:8081
+    - https://simplecoding-social.netlify.app
   allowed-methods:
     - GET
     - POST
