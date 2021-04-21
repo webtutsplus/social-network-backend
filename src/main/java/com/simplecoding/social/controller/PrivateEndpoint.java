@@ -2,10 +2,13 @@ package com.simplecoding.social.controller;
 
 import com.simplecoding.social.auth.SecurityService;
 import com.simplecoding.social.auth.models.UserDto;
+import com.simplecoding.social.dtos.PostDto;
 import com.simplecoding.social.exceptions.UnauthorizedException;
+import com.simplecoding.social.model.Post;
 import com.simplecoding.social.model.User;
 import com.simplecoding.social.repo.UserRepository;
 import com.simplecoding.social.service.FriendService;
+import com.simplecoding.social.service.PostService;
 import com.simplecoding.social.service.RoomService;
 import com.simplecoding.social.service.UserService;
 import org.modelmapper.ModelMapper;
@@ -15,6 +18,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.web.bind.annotation.*;
 
+import java.net.URI;
 import java.util.List;
 
 @RestController
@@ -27,6 +31,9 @@ public class PrivateEndpoint {
 
     @Autowired
     FriendService friendService;
+
+    @Autowired
+    PostService postService;
 
     @Autowired
     RoomService roomService;
@@ -71,6 +78,20 @@ public class PrivateEndpoint {
     public ResponseEntity<List<User>> getFriends() {
         List<User> myFriends = friendService.getFriends();
         return new ResponseEntity<List<User>>(myFriends, HttpStatus.OK);
+    }
+
+    @PostMapping("addpost")
+    public ResponseEntity<?> addPost(@RequestBody Post post) throws NullPointerException {
+        UserDto user = securityService.getUser();
+        Post savedPost = postService.savePost(user,post.getContent());
+        return ResponseEntity.created(URI.create("/private/mypost")).body(savedPost);
+    }
+
+    @GetMapping("mypost")
+    public ResponseEntity<?> myPosts() throws NullPointerException {
+        User user=userService.getUser(securityService.getUser().getEmail());
+        List<PostDto> postList = postService.getPostsOfUser(user.getId());
+        return ResponseEntity.ok(postList);
     }
 
     @GetMapping("getRoomName")
