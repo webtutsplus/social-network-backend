@@ -38,7 +38,7 @@ public class PostService {
     }
 
     public List<PostDto> getPostsOfUser(Integer userId){
-        List<Post> postList= postRepository.findPostByUser(userRepository.findUserById(userId));
+        List<Post> postList= postRepository.findPostByUserOrderById(userRepository.findUserById(userId));
         List<PostDto> postDtoList= new ArrayList<>();
         for (Post post :postList) {
             postDtoList.add(modelMapper.map(post,PostDto.class));
@@ -47,7 +47,7 @@ public class PostService {
     }
 
     public List<Post> getAllPost(){
-        return postRepository.findAll();
+        return postRepository.findAllByOrderByIdDesc();
     }
 
 }
