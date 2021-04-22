@@ -2,6 +2,7 @@ package com.simplecoding.social.service;
 
 import com.simplecoding.social.auth.SecurityService;
 import com.simplecoding.social.auth.models.UserDto;
+import com.simplecoding.social.dto.ChatRoomDTO;
 import com.simplecoding.social.exceptions.UnauthorizedException;
 import com.simplecoding.social.model.Room;
 import com.simplecoding.social.model.User;
@@ -76,6 +77,25 @@ public class RoomService {
         return room.getRoomName();
 
 
+    }
+
+    public List<ChatRoomDTO> getChatRooms() {
+        UserDto currentUserDto = securityService.getUser();
+        User currentUser = userRepository.findUserByEmail(currentUserDto.getEmail());
+        System.out.println("current user: " + currentUser.getId());
+        List<Room> rooms = roomRepository.findAllByFirstUserOrSecondUser(currentUser, currentUser);
+        List<ChatRoomDTO> chatRoomDTOS = new ArrayList<>();
+        for (Room room: rooms) {
+            ChatRoomDTO chatRoomDTO = new ChatRoomDTO();
+            chatRoomDTO.setMeetingRoom(room.getRoomName());
+            if (room.getFirstUser() != currentUser) {
+                chatRoomDTO.setUser(room.getFirstUser());
+            } else {
+                chatRoomDTO.setUser(room.getSecondUser());
+            }
+            chatRoomDTOS.add(chatRoomDTO);
+        }
+        return chatRoomDTOS;
     }
 
 }

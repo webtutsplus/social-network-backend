@@ -10,8 +10,10 @@ import java.util.List;
 @Repository
 public interface RoomRepository extends JpaRepository<Room,Integer> {
 
-    boolean existsByFirstUserAndSecondUser(User first,User second);
+    boolean existsByFirstUserAndSecondUser(User first, User second);
 
-    Room findByFirstUserAndSecondUser(User first,User second);
+    Room findByFirstUserAndSecondUser(User first, User second);
+
+    List<Room> findAllByFirstUserOrSecondUser(User firstUser, User secondUser);
 
 }

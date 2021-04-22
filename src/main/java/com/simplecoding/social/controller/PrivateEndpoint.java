@@ -3,6 +3,7 @@ package com.simplecoding.social.controller;
 import com.simplecoding.social.auth.SecurityService;
 import com.simplecoding.social.auth.models.UserDto;
 import com.simplecoding.social.dtos.PostDto;
+import com.simplecoding.social.dto.ChatRoomDTO;
 import com.simplecoding.social.exceptions.UnauthorizedException;
 import com.simplecoding.social.model.Post;
 import com.simplecoding.social.model.User;
@@ -68,16 +69,26 @@ public class PrivateEndpoint {
     }*/
 
     @GetMapping("addFriend")
-    public ResponseEntity<?> addUser(@RequestParam("friendId")String friendId) throws NullPointerException{
+    public ResponseEntity<?> addUser(@RequestParam("friendId") int friendId) throws NullPointerException{
         UserDto currentUser = securityService.getUser();
-        friendService.saveFriend(currentUser,Integer.parseInt(friendId));
+        //TODO throw exception if friend id is not valid
+        friendService.saveFriend(currentUser, friendId);
+        // also add a chatroom for the two users
+        roomService.saveRoom(currentUser, friendId);
         return ResponseEntity.ok("Friend added successfully");
     }
 
     @GetMapping("listFriends")
     public ResponseEntity<List<User>> getFriends() {
         List<User> myFriends = friendService.getFriends();
-        return new ResponseEntity<List<User>>(myFriends, HttpStatus.OK);
+        return new ResponseEntity<>(myFriends, HttpStatus.OK);
+    }
+
+    @GetMapping("rooms")
+    // get roomId along with friends for currentUsers
+    public ResponseEntity<?> getChatRooms() {
+        List<ChatRoomDTO> chatRooms = roomService.getChatRooms();
+        return new ResponseEntity<>(chatRooms, HttpStatus.OK);
     }
 
     @PostMapping("addpost")
@@ -95,9 +106,9 @@ public class PrivateEndpoint {
     }
 
     @GetMapping("getRoomName")
-    public ResponseEntity<String> getRoom(@RequestParam("friendId")int friendId) {
+    public ResponseEntity<String> getRoom(@RequestParam("friendId") int friendId) {
         UserDto currentUser = securityService.getUser();
-        roomService.saveRoom(currentUser,friendId);
+        roomService.saveRoom(currentUser, friendId);
         try {
             String room = roomService.getRoom(friendId);
             return new ResponseEntity<>(room, HttpStatus.OK);

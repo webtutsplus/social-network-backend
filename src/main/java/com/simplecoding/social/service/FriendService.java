@@ -60,7 +60,7 @@ public class FriendService {
     }
 
     public List<User> getFriends(){
-
+        // we save user1, user2 in table
         UserDto currentUserDto = securityService.getUser();
         User currentUser = userRepository.findUserByEmail(currentUserDto.getEmail());
         List<Friend> friends = friendRepository.findByFirstUser(currentUser);
